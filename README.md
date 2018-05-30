@@ -10,7 +10,7 @@ Project requirements included:
 * Any user should be able to post and share events and articles.
 * Calendar events, ads, and posts should be included in the feed. 
 * Users should be able to view private chats with other users.
-* A friends' list should be visible.
+* A friends list should be visible.
 
 
 
@@ -21,8 +21,11 @@ cd Yak-Social-Network
 ```
 In the project directory you will be required to run:
 
+### `npm install react-responsive-modal`
+For the modal component in the development mode.<br>
+
 ### `npm install react-router-dom`
-For the navbar in the development mode. <br>
+For the navbar in the development mode.<br>
 
 ### `npm start`
 Runs the app in the development mode.<br>
@@ -40,7 +43,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![ERD Screenshot](https://raw.githubusercontent.com/nss-dynamic-elephants/Yak-Social-Network/master/Dynamic-Elephants-ERD.png)
 
 # Contributors
-[Daniela Agnoletti](https://github.com/CashewRose)  
+[Cashew Agnoletti](https://github.com/CashewRose)  
 [Deanna Vickers](https://github.com/Deanna2000)  
 [Jessica Swift](https://github.com/jessnswift)  
 [Meghan Debity](https://github.com/megraohoh)  
