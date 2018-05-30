@@ -1,0 +1,71 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "fName": "Adam",
+            "lName": "Bronski",
+            "email": "adam@adam.com",
+            "location": "Cartersville"
+        },
+        {
+            "id": 2,
+            "fName": "Derrick",
+            "lName": "Ethridge",
+            "email": "Derrick@derrick.com",
+            "location": "Fredricksville"
+        },
+        {
+            "id":3,
+            "fName": "Gunter",
+            "lName": "Heckar",
+            "email": "gunter@gunter.com",
+            "location": "Innsville"
+        },
+        {
+            "id": 4,
+            "fName": "Jack",
+            "lName": "Kruger",
+            "email": "jack@jack.com",
+            "location": "Longville"
+        }
+    ],
+    "friendsList": [
+        {
+            "id": 1,
+            "friend1Id": 1,
+            "friend2Id": 2
+        }
+    ],
+    "friendRequest": [
+        {
+            "id": 1,
+            "senderId": 3,
+            "requestedId": 4
+        }
+    ],
+    "chatMessages": [
+        {
+            "id": 1,
+            "userId": 1,
+            "messageContent": "Chat message"
+        }
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "userId": 2,
+            "post": "Post content"
+        }
+    ],
+    "calendar": [
+        {
+            "id": 1,
+            "userId": 3,
+            "event": "Some event",
+            "date": "mm/dd/yyyy",
+            "location": "somewhere",
+            "start": "00:00",
+            "end": "00:00"
+        }
+    ]
+}
