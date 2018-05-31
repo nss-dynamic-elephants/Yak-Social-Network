@@ -13,21 +13,24 @@
             "fName": "Derrick",
             "lName": "Ethridge",
             "email": "Derrick@derrick.com",
-            "location": "Fredricksville"
+            "location": "Fredricksville",
+            "password": "123"
         },
         {
             "id":3,
             "fName": "Gunter",
             "lName": "Heckar",
             "email": "gunter@gunter.com",
-            "location": "Innsville"
+            "location": "Innsville",
+            "password": "123"
         },
         {
             "id": 4,
             "fName": "Jack",
             "lName": "Kruger",
             "email": "jack@jack.com",
-            "location": "Longville"
+            "location": "Longville",
+            "password": "123"
         }
     ],
     "friendsList": [
