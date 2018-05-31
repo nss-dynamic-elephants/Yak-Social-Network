@@ -68,5 +68,24 @@
             "start": "00:00",
             "end": "00:00"
         }
+    ],
+    "ads": [
+        {
+            "id": 1,
+            "company": "Facebook",
+            "title": "Yak ain't got nothing on us!",
+            "content": "We were the best before Yak, and we still are! Come back to us!"
+        },
+        {
+            "id": 2,
+            "company": "Twitter",
+            "title": "Quit Yakin' around!",
+            "content": "We have lots of tweets for you to read and catch up on! Forget Yak, we want you back!"
+        },
+        {
+            "id": 3,
+            "company": "Pfizer",
+            "title": "Testie",
+            "content": "Forget little blue pill, try our new big red capsule!"}
     ]
 }
