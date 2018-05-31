@@ -53,6 +53,7 @@ class Register extends Component {
             <input className="fNameInput" type="text" placeholder="first name" name="fName" value={this.state.fName} onChange={this.handleFirstNameChange.bind(this)}/>
             <input className="lNameInput" type="text" placeholder="last name" name="lName" value={this.state.lName} onChange={this.handleLastNameChange.bind(this)}/>
             <input className="emailInput" type="text" placeholder="email" name="email" value={this.state.email} onChange={this.handleEmailChange.bind(this)}/>
+            <input className="locationInput" type="text" placeholder="location" name="location" value={this.state.location} onChange={this.handleLocationChange.bind(this)}/>
             <input className="passwordInput" type="text" placeholder="password" name="password" value={this.state.password} onChange={this.handlePasswordChange.bind(this)}/>
 
 
