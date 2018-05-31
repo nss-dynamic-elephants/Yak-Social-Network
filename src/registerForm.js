@@ -10,7 +10,6 @@ class Register extends Component {
   };
 
   onOpenModal = () => {
-    console.log("button clicked")
     this.setState({ open: true });
   };
 
@@ -57,7 +56,7 @@ class Register extends Component {
             <input className="passwordInput" type="text" placeholder="password" name="password" value={this.state.password} onChange={this.handlePasswordChange.bind(this)}/>
 
 
-            <ValidateRegister />
+            <ValidateRegister onCloseModal = {this.onCloseModal}/>
           </form>
           </div>
         </Modal>
