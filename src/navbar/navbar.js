@@ -8,10 +8,10 @@ class NavBar extends Component {
         return (
             <nav>
                 <Link to="/">Home</Link>
-                <Link to="/">Search</Link>
                 <Link to="/">Profile</Link>
                 <Link to="/">Logout</Link>
                 <Link to="/">Notifications</Link>
+                <input type="text" id="search" placeholder="Search" />
             </nav>
         );
     }

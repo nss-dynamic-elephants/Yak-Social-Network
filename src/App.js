@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Login from './login.js'
 import Register from './registerForm';
 import Adlist from './Ads/AdList';
+import Login from './login';
 
 
 class App extends Component {
@@ -30,7 +30,7 @@ componentDidMount () {
 
         <p className="App-intro">
         </p>
-        < Login />
+        <Login />
         <Adlist />
       </div>
     )
