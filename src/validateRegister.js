@@ -5,6 +5,7 @@ class ValidateRegister extends Component {
 
     handleSubmit = function(event) {
         event.preventDefault()
+        console.log("Submit button clicked")
       }
 
     render() {
