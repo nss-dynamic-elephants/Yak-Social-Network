@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Register from './registerForm';
+import Adlist from './Ads/AdList';
 
 class App extends Component {
   state = {
@@ -27,6 +28,7 @@ componentDidMount () {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
+        <Adlist />
       </div>
     );
   }
