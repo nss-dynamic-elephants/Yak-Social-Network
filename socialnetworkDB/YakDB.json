@@ -5,7 +5,8 @@
             "fName": "Adam",
             "lName": "Bronski",
             "email": "adam@adam.com",
-            "location": "Cartersville"
+            "location": "Cartersville",
+            "password": "123"
         },
         {
             "id": 2,
