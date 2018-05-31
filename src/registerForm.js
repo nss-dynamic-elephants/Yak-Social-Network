@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import App from './App.js';
 import Modal from 'react-responsive-modal';
 import './styles/register.css';
 
@@ -10,6 +9,7 @@ class Register extends Component {
   };
 
   onOpenModal = () => {
+    console.log("button clicked")
     this.setState({ open: true });
   };
 
@@ -17,42 +17,34 @@ class Register extends Component {
     this.setState({ open: false });
   };
 
+  handleUsernameChange(event) {
+    this.setState({username: event.target.value})
+  }
+
+  handleEmailChange(event) {
+    this.setState({email: event.target.value})
+  }
+
   render() {
     const { open } = this.state;
     return (
       <div className="modal-overlay modal">
-        <h4>Centered modal</h4>
-        <button className="btn btn-action" onClick={this.onOpenModal}>
+        <button type="button" className="btn btn-action" onClick={this.onOpenModal}>
           Register
-        </button>{' '}
+        </button>
 
         <Modal open={open} onClose={this.onCloseModal} center>
-          <h2>Simple centered modal</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet
-            hendrerit risus, sed porttitor quam.
-          </p>
+          <div className="registerForm">
+            <h2>Register</h2>
+            <input className="usernameInput" type="text" placeholder="enter your name" name="username" value={this.state.username} onChange={this.handleUsernameChange.bind(this)}/>
+            <input className="emailInput" type="text" placeholder="enter your email" name="email" value={this.state.email} onChange={this.handleEmailChange.bind(this)}/>
+          <button className="submitButton">Submit</button>
+          </div>
         </Modal>
       </div>
     );
   }
 }
-        // // Button click opens the register form
-        // $("#registerID").on("click", function (event) {
-        //     console.log(event.currentTarget.id)
-        //     // Ensure the page is cleared
-        //     $("#holder").hide()
-        //     $("#headerID").empty()
-
-        // }
-
-
-//             // Create login/register form
-//             tagbuild("div", "user-section", "", "", "form")
-//             tagbuild("input", "form", "", "name", "username")
-//             tagbuild("input", "form", "", "email - ex: myname@email.com", "email")
-//             tagbuild("button", "form", "Complete Registration", "", "registerButton")
 
 //             $("#registerButton").on("click", function (event) {
 //                 const adduser = require("./adduser")
