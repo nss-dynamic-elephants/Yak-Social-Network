@@ -1,49 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router, Redirect, Route } from "react-router-dom";
 import NavBar from "./navbar/navbar";
-import Login from './login';
+import Dashboard from './Dashboard';
+import Landing from './LandingPage';
 
-
-
-// handleNav = function() {
-//     if(sessionStorage.length > 0 ){
-//         return
-//     <div>
-//         <NavBar/>
-//         <Route exact path="/" component={App} />
-//         <Route exact path="#" component={App} />
-//         <Route exact path="#" component={App} />
-//         <Route exact path="#" component={App} />
-//         <Route exact path="#" component={App} />
-//     </div>
-//     }
-// }
 
 ReactDOM.render((
     <Router>
         <div>
-            <Route exact path="/login" component={Login} />
-            <Route exact path="#" component={App} />
-            <Route exact path="#" component={App} />
-            <Route exact path="#" component={App} />
-            <Route exact path="#" component={App} />
-            <Route render={(props) => {
+            <Route exact path="/LandingPage" component={Landing} />
+            <Route exact path="#" component={Dashboard} />
+            <Route exact path="#" component={Dashboard} />
+            <Route exact path="#" component={Dashboard} />
+            <Route path="/Dashboard" render={(props) => {
                 if(sessionStorage.getItem("ActiveUser") === null) {
                     return (<Redirect to={{
-                        pathname: '/login',
+                        pathname: '/LandingPage' ,
                       }} />)
                 }
                 else {
                     return(<div>
                         <NavBar/>
-                        {/* <Dashboard /> */}
+                        <Dashboard />
                     </div>)
                 }
             }} />
+            {/* <Route path="/LandingPage" render={(props) => {
+                if(sessionStorage.getItem("ActiveUser") !== null) {
+                    return (<Redirect to={{
+                        pathname: '/Dashboard' ,
+                      }} />)
+                }
+            }} /> */}
         </div>
     </Router>
 ), document.querySelector("#root"))
