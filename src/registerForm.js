@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Modal from 'react-responsive-modal';
+import ValidateRegister from './validateRegister';
 import './styles/register.css';
 
 // Wrap entire registration form in a function
@@ -9,7 +10,6 @@ class Register extends Component {
   };
 
   onOpenModal = () => {
-    console.log("button clicked")
     this.setState({ open: true });
   };
 
@@ -17,12 +17,24 @@ class Register extends Component {
     this.setState({ open: false });
   };
 
-  handleUsernameChange(event) {
-    this.setState({username: event.target.value})
+  handleFirstNameChange(event) {
+    this.setState({fName: event.target.value})
+  }
+
+  handleLastNameChange(event) {
+    this.setState({lName: event.target.value})
   }
 
   handleEmailChange(event) {
     this.setState({email: event.target.value})
+  }
+
+  handleLocationChange(event) {
+    this.setState({location: event.target.value})
+  }
+
+  handlePasswordChange(event) {
+    this.setState({password: event.target.value})
   }
 
   render() {
@@ -35,10 +47,17 @@ class Register extends Component {
 
         <Modal open={open} onClose={this.onCloseModal} center>
           <div className="registerForm">
+          <form>
             <h2>Register</h2>
-            <input className="usernameInput" type="text" placeholder="enter your name" name="username" value={this.state.username} onChange={this.handleUsernameChange.bind(this)}/>
-            <input className="emailInput" type="text" placeholder="enter your email" name="email" value={this.state.email} onChange={this.handleEmailChange.bind(this)}/>
-          <button className="submitButton">Submit</button>
+            <input className="fNameInput" type="text" placeholder="first name" name="fName" value={this.state.fName} onChange={this.handleFirstNameChange.bind(this)}/>
+            <input className="lNameInput" type="text" placeholder="last name" name="lName" value={this.state.lName} onChange={this.handleLastNameChange.bind(this)}/>
+            <input className="emailInput" type="text" placeholder="email" name="email" value={this.state.email} onChange={this.handleEmailChange.bind(this)}/>
+            <input className="locationInput" type="text" placeholder="location" name="location" value={this.state.location} onChange={this.handleLocationChange.bind(this)}/>
+            <input className="passwordInput" type="text" placeholder="password" name="password" value={this.state.password} onChange={this.handlePasswordChange.bind(this)}/>
+
+
+            <ValidateRegister onCloseModal = {this.onCloseModal}/>
+          </form>
           </div>
         </Modal>
       </div>
