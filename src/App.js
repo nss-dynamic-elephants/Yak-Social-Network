@@ -7,7 +7,9 @@ import Adlist from './Ads/AdList';
 
 class App extends Component {
   state = {
-    users:[],
+    users:[
+
+    ],
     friendsList: [],
     chatMessages: [],
     posts: [],
